@@ -7,7 +7,11 @@ function displayMenu() {
     if (document.body.clientWidth > 850) {
         menu.classList.add("active");
     } else {
-        menu.classList.remove("active");
+        if (menu.classList.contains("active")) {
+            hamburger.classList.add("active");
+        } else {
+            hamburger.classList.remove("active");
+        }
     }
 }
 

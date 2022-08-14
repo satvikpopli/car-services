@@ -74,7 +74,7 @@ nav li a {
 }
 
 nav li a,
-span {
+.last span {
     display: block;
     width: 100%;
     text-align: center;
@@ -86,33 +86,29 @@ span {
     letter-spacing: 1px;
 }
 
-nav li div {
-    display: flex;
+.last span {
+    background-color: var(--primary);
+    color: var(--bg);
+    font-weight: 600;
 }
 
-nav li .cta {
+nav .cta {
     display: flex;
     align-items: center;
     border-radius: 10px;
+    margin: 1rem clamp(5rem, 46.000vw - 11.100rem, 28rem);
     padding: 1rem 0;
-    margin: 0 4rem;
     background-color: var(--primary);
     justify-content: center;
     gap: 1rem;
 }
 
-nav li .book-now {
-    display: flex;
-    flex-direction: column;
+nav.active {
+    transform: translateY(0%);
 }
 
-nav li .book-now span {
-    color: var(--bg);
-    font-weight: 600;
-}
-
-.last-li {
-    margin: 0rem clamp(0rem, 33.493vw - 11.722rem, 14rem);
+nav a {
+    text-decoration: none;
 }
 
 lord-icon {
@@ -155,11 +151,6 @@ lord-icon {
     transform: rotate(-45deg);
 }
 
-nav.active {
-    transform: translateY(0%);
-}
-
-
 @media (min-width: 850px) {
     .hamburger {
         display: none;
@@ -199,7 +190,7 @@ nav.active {
         margin-left: 2rem;
         gap: clamp(3rem, 11.864vw - 7.085rem, 10rem);
         align-items: center;
-        width: 100%;
+        width: auto;
     }
 
     nav li {
@@ -216,12 +207,6 @@ nav.active {
         transition: transform 250ms ease-in-out;
     }
 
-    nav .last-li a {
-        text-shadow: unset;
-        display: flex;
-        justify-content: center;
-    }
-
     nav li a::after {
         content: "";
         display: block;
@@ -236,10 +221,6 @@ nav.active {
         transition: width 100ms ease-in-out;
     }
 
-    nav .last-li a::after {
-        display: none;
-    }
-
     nav li a:hover::after {
         opacity: 1;
         width: 100%;
@@ -250,31 +231,31 @@ nav.active {
         width: 100%;
     }
 
-    .last-li {
-        width: 20%;
-        margin: 0;
+    nav .last {
+        margin-left: clamp(1rem, 18.644vw - 14.847rem, 12rem);
+        transition: transform 200ms ease-in-out;
     }
 
-    nav .last-li a:hover {
-        transform: scale(1.05);
+    nav .last:hover {
+        transform: scale(1.025);
     }
 
-    nav li .cta {
+    nav .cta {
         margin: unset;
-        background-color: var(--primary);
-        /* width: clamp(16rem, 5.952vw + 11.429rem, 20rem); */
-        width: 20rem;
+        padding: 1rem;
+        width: 19rem;
     }
 
-    nav li .book-now {
+    nav .book-now {
+        display: flex;
+        flex-direction: column;
         align-items: center;
     }
 
-    nav li .book-now span {
+    nav .book-now span {
         color: var(--bg);
         width: max-content;
         font-weight: 600;
-        font-size: clamp(1rem, 0.372vw + 0.714rem, 1.25rem);
+        font-size: 1.25rem;
     }
-
 }
