@@ -171,7 +171,7 @@ nav.active {
         justify-content: space-between;
         align-items: center;
     }
-    
+
     .logo {
         margin-left: 2rem;
         font-size: clamp(2.5rem, 2.315vw + 0.722rem, 3.5rem);
@@ -218,13 +218,36 @@ nav.active {
 
     nav .last-li a {
         text-shadow: unset;
+        display: flex;
+        justify-content: center;
     }
 
-    nav li a:hover {
+    nav li a::after {
+        content: "";
+        display: block;
+        height: 2px;
+        background-color: var(--primary);
+        width: 0%;
+        position: relative;
+        top: 4px;
         text-shadow: unset;
-        font-weight: 400;
-        text-shadow: unset;
-        transform: scale(1.1);
+        opacity: 1;
+        text-align: center;
+        transition: width 100ms ease-in-out;
+    }
+
+    nav .last-li a::after {
+        display: none;
+    }
+
+    nav li a:hover::after {
+        opacity: 1;
+        width: 100%;
+    }
+
+    nav li a.current::after {
+        opacity: 1;
+        width: 100%;
     }
 
     .last-li {
@@ -232,14 +255,15 @@ nav.active {
         margin: 0;
     }
 
-    .last-li a {
+    nav .last-li a:hover {
         transform: scale(1.05);
     }
 
     nav li .cta {
         margin: unset;
         background-color: var(--primary);
-        width: clamp(16rem, 5.952vw + 11.429rem, 20rem);
+        /* width: clamp(16rem, 5.952vw + 11.429rem, 20rem); */
+        width: 20rem;
     }
 
     nav li .book-now {
