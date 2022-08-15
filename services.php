@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./styles/navbar.css">
     <script src="https://cdn.lordicon.com/xdjxvujz.js"></script>
     <script src="./scripts/essentials.js" defer></script>
-    <title>CarDash - Premium Car Detailing Services</title>
+    <title>Services | CarDash</title>
 </head>
 
 <body>
