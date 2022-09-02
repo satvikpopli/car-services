@@ -201,9 +201,9 @@ lord-icon {
     nav li a {
         display: inline;
         padding: unset;
-        font-weight: 300;
+        font-weight: 500;
+        color: rgb(100, 100, 100);
         font-size: clamp(1.5rem, 1.157vw + 0.611rem, 2rem);
-        text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.3);
         transition: transform 250ms ease-in-out;
     }
 
